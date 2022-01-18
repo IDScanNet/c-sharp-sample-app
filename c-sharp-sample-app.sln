@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30804.86
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "c-sharp-sample-app", "c-sharp-sample-app\c-sharp-sample-app.csproj", "{288E7C7E-DC16-4F34-9B7F-2514D696C583}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "c-sharp-sample-app", "c-sharp-sample-app\c-sharp-sample-app.csproj", "{288E7C7E-DC16-4F34-9B7F-2514D696C583}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{CA5E4EAF-3242-4F67-86FB-7C77198139EA}"
 	ProjectSection(SolutionItems) = preProject
-		..\..\..\Downloads\dlplib_netStandard20_16.2111.09.3\dlplib.dll = ..\..\..\Downloads\dlplib_netStandard20_16.2111.09.3\dlplib.dll
+		c-sharp-sample-app\lib\dlplib.dll = c-sharp-sample-app\lib\dlplib.dll
 	EndProjectSection
 EndProject
 Global
