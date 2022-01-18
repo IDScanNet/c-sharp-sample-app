@@ -11,6 +11,10 @@ namespace c_sharp_sample_app {
             DlplibLicenseStatus status = DriverLicense.GetDlpLibLicenseStatus();
             Console.Out.WriteLine("DLL License File Path: {0}", status.DlplibLicensePath);
             Console.Out.WriteLine("DLL License File Expiration Date: {0}", status.ExpirationDate);
+            Console.Out.WriteLine("DLL License File Status: {0}", status.LicenseStatus);
+            Console.Out.WriteLine("DLL License File Features: {0}", status.Features);
+            Console.Out.WriteLine("DLL License File Feature Code: {0}", status.FeaturesCode);
+            Console.Out.WriteLine("\n\n\n");
 
             // Read in all the samepl data from the files
             string cac_barcode_one = System.IO.File.ReadAllText(@".\sample-data\cac_barcode_one.txt");
