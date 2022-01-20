@@ -14,7 +14,11 @@ namespace c_sharp_sample_app {
             Console.Out.WriteLine("DLL License File Status: {0}", status.LicenseStatus);
             Console.Out.WriteLine("DLL License File Features: {0}", status.Features);
             Console.Out.WriteLine("DLL License File Feature Code: {0}", status.FeaturesCode);
-            Console.Out.WriteLine("\n\n\n");
+            Console.Out.WriteLine("\n\n");
+
+            
+            Console.Out.WriteLine("Drivers License Object's License File Status: {0}", lic.GetLicenseStatus());
+            Console.Out.WriteLine("\n\n");
 
             // Read in all the samepl data from the files
             string cac_barcode_one = System.IO.File.ReadAllText(@".\sample-data\cac_barcode_one.txt");
@@ -23,7 +27,7 @@ namespace c_sharp_sample_app {
             string pdf417_barcode_one = System.IO.File.ReadAllText(@".\sample-data\pdf417_barcode_one.txt");
             string pdf417_barcode_two = System.IO.File.ReadAllText(@".\sample-data\pdf417_barcode_two.txt");
             string three_line_mrz_one = System.IO.File.ReadAllText(@".\sample-data\three_line_mrz_one.txt");
-
+            
             // How to parse a CAC Card
             // Method one
             if (lic.ExtractInfo(cac_barcode_one)) {
