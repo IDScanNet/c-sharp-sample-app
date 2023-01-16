@@ -16,6 +16,21 @@
     <None Update="sample-data\cac_barcode_one.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="sample-data\canadian_barcode_two.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="sample-data\canadian_barcode_one.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="sample-data\drivers_license_three.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="sample-data\drivers_license_two.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="sample-data\drivers_license_one.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="sample-data\passport_mrz_one.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

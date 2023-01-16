@@ -21,13 +21,38 @@ namespace c_sharp_sample_app {
             Console.Out.WriteLine("\n\n");
 
             // Read in all the samepl data from the files
+            string drivers_license_barcode_one = System.IO.File.ReadAllText(@".\sample-data\drivers_license_one.txt");
+            string drivers_license_barcode_two = System.IO.File.ReadAllText(@".\sample-data\drivers_license_two.txt");
+            string drivers_license_barcode_three = System.IO.File.ReadAllText(@".\sample-data\drivers_license_three.txt");
+
             string cac_barcode_one = System.IO.File.ReadAllText(@".\sample-data\cac_barcode_one.txt");
+            string canadian_barcode_one = System.IO.File.ReadAllText(@".\sample-data\canadian_barcode_one.txt");
+            string canadian_barcode_two = System.IO.File.ReadAllText(@".\sample-data\canadian_barcode_two.txt");
+
             string passport_mrz_one = System.IO.File.ReadAllText(@".\sample-data\passport_mrz_one.txt");
             string passport_mrz_two = System.IO.File.ReadAllText(@".\sample-data\passport_mrz_two.txt");
             string pdf417_barcode_one = System.IO.File.ReadAllText(@".\sample-data\pdf417_barcode_one.txt");
             string pdf417_barcode_two = System.IO.File.ReadAllText(@".\sample-data\pdf417_barcode_two.txt");
             string three_line_mrz_one = System.IO.File.ReadAllText(@".\sample-data\three_line_mrz_one.txt");
-            
+
+            // Method one
+            if (lic.ExtractInfo(drivers_license_barcode_one))
+            {
+                Console.Out.WriteLine("First Driver's License's Last Name: {0}", lic.LastName);
+            }
+
+            // Method one
+            if (lic.ExtractInfo(drivers_license_barcode_two))
+            {
+                Console.Out.WriteLine("Second Driver's License's Last Name: {0}", lic.LastName);
+            }
+
+            // Method one
+            if (lic.ExtractInfo(drivers_license_barcode_three))
+            {
+                Console.Out.WriteLine("Third Driver's License's Last Name: {0}", lic.LastName);
+            }
+
             // How to parse a CAC Card
             // Method one
             if (lic.ExtractInfo(cac_barcode_one)) {
@@ -37,6 +62,27 @@ namespace c_sharp_sample_app {
             DriverLicense cacCard = DriverLicense.ParseText(cac_barcode_one);
             Console.Out.WriteLine("CAC Card's Full Name: {0}", cacCard.LastName);
 
+
+            // How to parse a Canadian Barcode Card
+            // Method one
+            if (lic.ExtractInfo(canadian_barcode_one))
+            {
+                Console.Out.WriteLine("Canadian Barcode's Full Name: {0}", lic.LastName);
+            }
+            // Method two
+            DriverLicense canadianCard = DriverLicense.ParseText(canadian_barcode_one);
+            Console.Out.WriteLine("Canadian Barcode's Full Name: {0}", canadianCard.LastName);
+
+
+            // How to parse a Canadian Barcode Card (Two)
+            // Method one
+            if (lic.ExtractInfo(canadian_barcode_two))
+            {
+                Console.Out.WriteLine("Canadian Barcode's (Two) Full Name: {0}", lic.City);
+            }
+            // Method two
+            DriverLicense canadianTwoCard = DriverLicense.ParseText(canadian_barcode_two);
+            Console.Out.WriteLine("Canadian Barcode's (Two) Full Name: {0}", canadianTwoCard.City);
 
 
             // How to parse a Passport
