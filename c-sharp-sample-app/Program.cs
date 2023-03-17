@@ -33,6 +33,8 @@ namespace c_sharp_sample_app {
             string passport_mrz_two = System.IO.File.ReadAllText(@".\sample-data\passport_mrz_two.txt");
             string pdf417_barcode_one = System.IO.File.ReadAllText(@".\sample-data\pdf417_barcode_one.txt");
             string pdf417_barcode_two = System.IO.File.ReadAllText(@".\sample-data\pdf417_barcode_two.txt");
+            string pdf417_barcode_three = System.IO.File.ReadAllText(@".\sample-data\pdf417_barcode_three.txt");
+
             string three_line_mrz_one = System.IO.File.ReadAllText(@".\sample-data\three_line_mrz_one.txt");
 
             // Method one
@@ -127,6 +129,16 @@ namespace c_sharp_sample_app {
             DriverLicense pdf417Two = DriverLicense.ParseText(pdf417_barcode_two);
             Console.WriteLine("Second Pdf417 Barcode's Full Name: {0}", pdf417Two.LastName);
 
+
+            // How to parse PDF417 barcode (third sample)
+            // Method one
+            if (lic.ExtractInfo(pdf417_barcode_three))
+            {
+                Console.WriteLine("Third Pdf417 Barcode's Full Name: {0}", lic.LastName);
+            }
+            // Method two
+            DriverLicense pdf417Three = DriverLicense.ParseText(pdf417_barcode_three);
+            Console.WriteLine("Third Pdf417 Barcode's Full Name: {0}", pdf417Three.LastName);
 
 
             // How to parse a three line MRZ

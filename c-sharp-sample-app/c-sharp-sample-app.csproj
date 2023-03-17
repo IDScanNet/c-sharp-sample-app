@@ -40,6 +40,9 @@
     <None Update="sample-data\pdf417_barcode_one.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="sample-data\pdf417_barcode_three.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="sample-data\pdf417_barcode_two.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
